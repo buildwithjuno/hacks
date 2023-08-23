@@ -13,6 +13,7 @@ This hack aims to transform an existing canister on the IC mainnet into a Juno s
 1. Collect following principals on Juno's console:
 
 a. Your mission control ID available in [https://console.juno.build/mission-control/](https://console.juno.build/mission-control/)
+
 b. Your developer ID in [https://console.juno.build/settings](https://console.juno.build/settings)
 
 2. Collect your terminal Juno CLI controller ID running `juno whoami`.
@@ -33,19 +34,19 @@ dfx canister update-settings <your-canister-id> --add-controller <developer-id> 
 dfx canister update-settings <your-canister-id> --add-controller <cli-id> --network ic
 ```
 
-4. Edit [canister-to-satellite.sh] to set your Juno's principals and targeted canister ID.
+5. Edit [canister-to-satellite.sh] to set your Juno's principals and targeted canister ID.
 
-5. Run the script [canister-to-satellite.sh] to transform the canister into a Satellite.
+6. Run the script [canister-to-satellite.sh] to transform the canister into a Satellite.
 
 ⚠️ Be aware that transforming the canister will wipe its state ⚠️
 
-6. At this point you might want to deploy your dapp to your new Satellite.
+7. At this point you might want to deploy your dapp to your new Satellite.
 
 - In your dapp project, manually edit the `satelliteId` in `juno.json`.
 - Build your dapp if required.
 - Deploy running `juno deploy`.
 
-7. Finally, we need to add your new satellite to your mission control. That way, it shall appear in Juno's console.
+8. Finally, we need to add your new satellite to your mission control. That way, it shall appear in Juno's console.
 
 ```bash
 npm ci
