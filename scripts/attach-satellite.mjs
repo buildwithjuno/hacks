@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { getIdentity } from "./auth.mjs";
-import { setSatellite } from "@junobuild/admin";
+import { attachSatellite } from "@junobuild/admin";
 import fetch from "node-fetch";
 import { Principal } from "@dfinity/principal";
 
@@ -28,7 +28,7 @@ console.log(
 );
 
 try {
-  await setSatellite({
+  await attachSatellite({
     missionControl,
     satelliteId: Principal.fromText(satelliteId),
     satelliteName: name,

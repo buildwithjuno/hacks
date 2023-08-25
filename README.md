@@ -8,6 +8,8 @@ A collection of hacks and workarounds for Juno and its outer ecosystem.
 
 ## Canister to Satellite
 
+⚠️ This method has never been tested and is not yet functional. Reach out Juno first if you wish to use it. ⚠️
+
 This hack aims to transform an existing canister on the IC mainnet into a Juno satellite that can be administered by a developer and their mission control.
 
 1. Collect following principals on Juno's console:
@@ -46,9 +48,9 @@ dfx canister update-settings <your-canister-id> --add-controller <cli-id> --netw
 - Build your dapp if required.
 - Deploy running `juno deploy`.
 
-8. Finally, we need to add your new satellite to your mission control. That way, it shall appear in Juno's console.
+8. Finally, we need to attach your new satellite to your mission control. That way, it shall appear in Juno's console.
 
 ```bash
 npm ci
-npm run set-satellite -- --mission_control_id=<mission-control-id> --satellite_id=<your-canister-id> --name=<a-name-for-your-satellite>
+npm run attach-satellite -- --mission_control_id=<mission-control-id> --satellite_id=<your-canister-id> --name=<a-name-for-your-satellite>
 ```

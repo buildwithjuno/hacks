@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "format": "prettier . --write",
-    "set-satellite": "node ./scripts/mc-set-satellite.mjs"
+    "attach-satellite": "node scripts/attach-satellite.mjs"
   },
   "author": "",
   "license": "MIT",
